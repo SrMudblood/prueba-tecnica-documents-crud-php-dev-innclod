@@ -1,0 +1,23 @@
+{
+    "name": "jesus-lozada/documents-crud",
+    "description": "Prueba tecnica InnClod",
+    "type": "composer-package",
+    "require": {
+        "twbs/bootstrap": "^5.3",
+        "vlucas/phpdotenv": "^5.6",
+        "illuminate/database": "^11.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Models\\": "models/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jesus Lozada",
+            "email": "jeallomo@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
