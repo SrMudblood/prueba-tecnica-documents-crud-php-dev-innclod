@@ -17,6 +17,7 @@ include 'views/includes/config_head.layout.php'; ?>
                 <th scope="col">Contenido</th>
                 <th scope="col">Tipo de documento</th>
                 <th scope="col">Tipo de proceso</th>
+                <th scope="col">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,16 @@ include 'views/includes/config_head.layout.php'; ?>
                     <td><?= $doc->DOC_CONTENIDO ?></td>
                     <td><?= TipTipoDoc::find($doc->DOC_ID_TIPO)->TIP_NOMBRE ?></td>
                     <td><?= ProProceso::find($doc->DOC_ID_PROCESO)->PRO_NOMBRE ?></td>
+                    <td>
+                        <form action="deleteDocument/delete" method="post">
+                            <input type="hidden" name="id" value="<?= $doc->DOC_ID ?>">
+                            <button type="submit" class="btn btn-danger">X</button>
+                        </form>
+                        <form action="updateDocument/update" method="post">
+                            <input type="hidden" name="id" value="<?= $doc->DOC_ID ?>">
+                            <button type="submit" class="btn btn-primary">Editar</button>
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
