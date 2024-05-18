@@ -3,6 +3,9 @@
 namespace Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+use Models\DocDocumento;
 
 class TipTipoDoc extends Model
 {
@@ -12,6 +15,16 @@ class TipTipoDoc extends Model
     protected $fillable = [
         'TIP_NOMBRE', 'TIP_PREFIJO'
     ];
+
+    /**
+     * Relación con los documentos asociados a este tipo de documento
+     *
+     * @return HasMany
+     */
+    public function documentos(): HasMany
+    {
+        return $this->hasMany(DocDocumento::class, 'fk_doc_id_tipo');
+    }
 
     /**
      * Asigna el valor del campo TIP_NOMBRE

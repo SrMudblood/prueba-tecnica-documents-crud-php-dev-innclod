@@ -1,7 +1,5 @@
 <div id="formContent">
-  <!-- Tabs Titles -->
 
-  <!-- Icon -->
   <picture>
     <img src="src/user-login-button.svg" id="icon" alt="Login Icon" />
   </picture>
@@ -17,8 +15,6 @@
 
 
 <style>
-  /* BASIC */
-
   html {
     background-color: #56baed;
   }

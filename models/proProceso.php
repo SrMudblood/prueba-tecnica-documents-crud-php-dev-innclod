@@ -3,6 +3,9 @@
 namespace Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+use Models\DocDocumento;
 
 class ProProceso extends Model
 {
@@ -12,6 +15,16 @@ class ProProceso extends Model
     protected $fillable = [
         'PRO_NOMBRE', 'PRO_PREFIJO'
     ];
+
+    /**
+     * Relación con los documentos asociados a este proceso
+     *
+     * @return HasMany
+     */
+    public function documentos(): HasMany
+    {
+        return $this->hasMany(DocDocumento::class, 'fk_doc_id_proceso');
+    }
 
     /**
      * Asigna el valor del campo PRO_NOMBRE

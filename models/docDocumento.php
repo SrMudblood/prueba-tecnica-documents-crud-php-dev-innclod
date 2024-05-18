@@ -19,12 +19,13 @@ class DocDocumento extends Model
 
     public function tipoDocumento(): BelongsTo
     {
-        return $this->belongsTo(TipTipoDoc::class, 'fk_doc_id_tipo', 'DOC_ID_TIPO');
+        return $this->belongsTo(TipTipoDoc::class, 'fk_doc_id_tipo');
     }
 
     public function proceso(): BelongsTo
     {
-        return $this->belongsTo(ProProceso::class, 'fk_doc_id_proceso', 'DOC_ID_PROCESO');
+        echo $this->attributes['DOC_ID_PROCESO'];
+        return $this->belongsTo(ProProceso::class, 'fk_doc_id_proceso');
     }
 
     /**
