@@ -7,7 +7,7 @@ class LoginController
 
     public function index()
     {
-        if ($_SESSION['auth'] ?? false == true) {
+        if (($_SESSION['auth'] ?? false) == true) {
             header('Location: /documents');
         } else {
             include 'views/pages/login.page.php';
@@ -16,7 +16,7 @@ class LoginController
 
     public function login()
     {
-        if ($_SESSION['auth'] ?? false == true) {
+        if (($_SESSION['auth'] ?? false) == true) {
             header('Location: /documents');
         } else {
 
