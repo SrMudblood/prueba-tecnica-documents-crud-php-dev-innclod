@@ -27,4 +27,20 @@ class DocumentsController
             header('Location: /');
         }
     }
+
+    public function update()
+    {
+        if (($_SESSION['auth'] ?? false) == true) {
+            if (isset($_POST['id'])) {
+                $doc = DocDocumento::find($_POST['id']);
+                $docsTypes = TipTipoDoc::all();
+                $docsProcesses = ProProceso::all();
+                require 'views/pages/updateDocument.page.php';
+            } else {
+                header('Location: /documents');
+            }
+        } else {
+            header('Location: /');
+        }
+    }
 }

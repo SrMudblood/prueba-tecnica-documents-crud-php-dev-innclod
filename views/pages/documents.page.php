@@ -34,7 +34,7 @@ include 'views/includes/config_head.layout.php'; ?>
                             <input type="hidden" name="id" value="<?= $doc->DOC_ID ?>">
                             <button type="submit" class="btn btn-danger">X</button>
                         </form>
-                        <form action="updateDocument/update" method="post">
+                        <form action="documents/update" method="post">
                             <input type="hidden" name="id" value="<?= $doc->DOC_ID ?>">
                             <button type="submit" class="btn btn-primary">Editar</button>
                         </form>
