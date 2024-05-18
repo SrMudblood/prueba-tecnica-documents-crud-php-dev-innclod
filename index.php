@@ -1,7 +1,9 @@
 <?php
 
 include 'models/db_connection.php';
+include 'controllers/notFound.controller.php';
 
+$notFound = new NotFoundController();
 $url = parse_url($_SERVER['REQUEST_URI'])['path'];
 $url = explode('/', $url);
 
@@ -47,11 +49,11 @@ if (file_exists($controller_url)) {
         if (method_exists($page, $action)) {
             $page->$action();
         } else {
-            echo '404 Action not found';
+            $notFound->index();
         }
     } else {
-        echo '404 Class not found: ';
+        $notFound->index();
     }
 } else {
-    echo '404 Controller not found: ';
+    $notFound->index();
 }
