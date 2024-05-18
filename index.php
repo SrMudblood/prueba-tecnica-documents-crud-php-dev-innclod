@@ -8,10 +8,10 @@ $url = explode('/', $url);
 session_start();
 
 if (count($url) == 2) {
-    if ($url[1] && $_SESSION['auth'] ?? false == true) {
+    if ($url[1] && ($_SESSION['auth'] ?? false) == true) {
         $controller = $url[1];
         $action = 'index';
-    } elseif ($url[1] && $_SESSION['auth'] ?? false == false) {
+    } elseif ($url[1] && ($_SESSION['auth'] ?? false) == false) {
         header('Location: /');
     } else {
         $controller = 'login';
@@ -20,7 +20,7 @@ if (count($url) == 2) {
 } else {
     if ($url[2]) {
 
-        if ($_SESSION['auth'] ?? false == false) {
+        if (($_SESSION['auth'] ?? false) == false) {
             if ($url[1] == 'login' && $url[2] == 'login') {
                 $controller = 'login';
                 $action = 'login';
@@ -55,22 +55,3 @@ if (file_exists($controller_url)) {
 } else {
     echo '404 Controller not found: ';
 }
-
-/**
- *use Models\User;
- *use Models\TipTipoDoc;
- *use Models\ProProceso;
-
- *$users = User::all();
- *$tipos = TipTipoDoc::all();
- *$procesos = ProProceso::all();
-
- *foreach ($users as $user) {
- *    echo $user->username . "<br>";
- *    echo $user->pass . "<br>";
- *}
-
- *foreach ($procesos as $proceso) {
- *    echo $proceso->PRO_PREFIJO . ": " . $proceso->PRO_NOMBRE . "<br>";
- *}
- */
