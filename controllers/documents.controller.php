@@ -14,6 +14,7 @@ class DocumentsController
             include 'views/pages/documents.page.php';
         } else {
             header('Location: /');
+            exit;
         }
     }
 
@@ -25,6 +26,7 @@ class DocumentsController
             include 'views/pages/createDocument.page.php';
         } else {
             header('Location: /');
+            exit;
         }
     }
 
@@ -38,9 +40,11 @@ class DocumentsController
                 require 'views/pages/updateDocument.page.php';
             } else {
                 header('Location: /documents');
+                exit;
             }
         } else {
             header('Location: /');
+            exit;
         }
     }
 }

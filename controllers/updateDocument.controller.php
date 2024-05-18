@@ -48,11 +48,14 @@ class UpdateDocumentController
                 }
                 $doc->save();
                 header('Location: /documents');
+                exit;
             } else {
                 header('Location: /documents');
+                exit;
             }
         } else {
             header('Location: /');
+            exit;
         }
     }
 }

@@ -5,10 +5,11 @@ use Models\User;
 class LoginController
 {
 
-    public function index()
+    public function index($error = false)
     {
         if (($_SESSION['auth'] ?? false) == true) {
             header('Location: /documents');
+            exit;
         } else {
             include 'views/pages/login.page.php';
         }
@@ -18,28 +19,38 @@ class LoginController
     {
         if (($_SESSION['auth'] ?? false) == true) {
             header('Location: /documents');
+            exit;
         } else {
-
-            echo $_SESSION['auth'];
 
             $username = $_POST['username'] ?? '';
             $password = $_POST['password'] ?? '';
-
-            echo $username;
-            echo $password . "<br>";
 
             $user = User::where('username', $username)->first();
 
             if (isset($user)) {
                 if ($password == $user->pass) {
                     $_SESSION['auth'] = true;
-                    echo 'Logged in';
+                    header('Location: /documents');
+                    exit;
                 } else {
-                    header('Location: /?error=true');
+                    header('Location: /login/index?error=true');
+                    exit;
                 }
             } else {
-                header('Location: /?error=true');
+                header('Location: /login/index?error=true');
+                exit;
             }
         }
+    }
+
+    public function logout()
+    {
+        if (($_SESSION['auth'] ?? false) == true) {
+            session_destroy();
+            header('Location: /');
+            exit;
+        }
+        header('Location: /');
+        exit;
     }
 }

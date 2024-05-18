@@ -40,11 +40,14 @@ class CreateDocumentController
                 $documento->save();
 
                 header('Location: /documents');
+                exit;
             } else {
                 header('Location: /documents/create');
+                exit;
             }
         } else {
             header('Location: /');
+            exit;
         }
     }
 }
