@@ -1,14 +1,13 @@
 # *CRUD para gestión de documentos*
-
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) <img src="/src/eloquent.jpg" height="28">
 
----
+<br>
 
 ## Guía de deploy de la aplicación
 
 Este proyecto es una aplicación **PHP** que utiliza **Composer** para la gestión de dependencias y una base de datos SQL alojada en **google cloud**. A continuación, se detallan los pasos necesarios para realizar el despliegue local en un servidor php.
 
----
+<br>
 
 ## Instalación de PHP
 
@@ -47,7 +46,7 @@ Este proyecto es una aplicación **PHP** que utiliza **Composer** para la gesti�
 
      - Ejecuta source **~/.bashrc** para aplicar los cambios.
 
----
+<br>
 
 ## Instalación de Composer
 
@@ -61,6 +60,8 @@ Este proyecto es una aplicación **PHP** que utiliza **Composer** para la gesti�
    - Si la instalación no agregó Composer automáticamente al PATH, debes hacerlo manualmente. Aquí tienes una guía para hacerlo:
      - [Agregar Composer al PATH en Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
      - [Agregar Composer al PATH en macOS/Linux](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+
+<br>
 
 ## Obtener archivos de la aplicación
 
@@ -77,6 +78,8 @@ Este proyecto es una aplicación **PHP** que utiliza **Composer** para la gesti�
    ```bash
    code .
    ```
+
+<br>
 
 ## Realizar deploy
 
@@ -97,3 +100,6 @@ Dentro de la carpeta del **proyecto**, realiza los siguientes pasos para realiza
    Puedes cambiar el puerto 8000 a cualquier otro que desees que tengas disponible.
 
 Y ahora puedes acceder a la aplicación en la dirección **<http://localhost:8000/>** en tu navegador web de preferencia y ver la aplicación en acción.
+
+
+<br>
