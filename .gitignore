@@ -1,7 +1,5 @@
 vendor/
 
-.env
-
 # Ignore lock file
 composer.lock
 
