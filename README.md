@@ -1,4 +1,5 @@
 # *CRUD para gestión de documentos*
+
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) <img src="/src/eloquent.jpg" height="28">
 
 <br>
@@ -101,5 +102,11 @@ Dentro de la carpeta del **proyecto**, realiza los siguientes pasos para realiza
 
 Y ahora puedes acceder a la aplicación en la dirección **<http://localhost:8000/>** en tu navegador web de preferencia y ver la aplicación en acción.
 
+<br>
+
+### Credenciales de usuario para login
+
+- Usuario: **userAdmin01**
+- Contraseña: **9955aa**
 
 <br>
